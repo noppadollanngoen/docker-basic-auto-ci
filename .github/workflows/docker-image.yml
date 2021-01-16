@@ -13,9 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-#     - uses: actions/checkout@v2
-#     - name: Build the Docker image
-#       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - uses: actions/checkout@v2
     - name: docker login
       env:
@@ -25,7 +22,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
         
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag chamodshehanka/node-test:$(date +%s)
+      run: docker build . --file Dockerfile --tag noppadol001/lab7:$(date +%s)
       
     - name: Docker Push
-      run: docker push chamodshehanka/node-test
+      run: docker push noppadol001/lab7
