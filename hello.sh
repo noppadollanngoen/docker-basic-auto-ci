@@ -1,1 +1,1 @@
-echo $WELCOME
+echo "Hello"
