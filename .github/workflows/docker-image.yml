@@ -22,7 +22,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
         
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag noppadol001/lab7:$(date +%s)
+      run: docker build . --file Dockerfile --tag username/registry:$(date +%s)
       
     - name: Docker Push
-      run: docker push noppadol001/lab7
+      run: docker push username/registry
